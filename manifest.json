@@ -1,11 +1,11 @@
 {
-  "author": "@racle",
-  "name": "Undisposition [Racle fork]",
+  "manifest_version": 3,
+  "author": "@timonwong",
+  "name": "Undisposition [timonwong fork]",
   "description": "Removes Content-Disposition: attachment HTTP header to allow view files instead of downloading them. Extension icon acts as toggle.",
   "version": "0.0.4",
-  "manifest_version": 2,
   "background": {
-    "scripts": ["undisposition_bg.js"],
+    "scripts": ["background.js"],
     "persistent": true
   },
   "icons": {

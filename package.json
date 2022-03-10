@@ -1,0 +1,38 @@
+{
+  "name": "undisposition",
+  "version": "1.0.0",
+  "description": "undisposition",
+  "scripts": {
+    "build:bg": "parcel build src/background/index.ts --dist-dir dist/background --no-source-maps",
+    "build:content": "parcel build src/content/index.ts --dist-dir dist/content --no-source-maps",
+    "build:options": "parcel build src/options/index.html --dist-dir dist/options --public-url ./ --no-source-maps",
+    "build:popup": "parcel build src/popup/index.html --dist-dir dist/popup --public-url ./ --no-source-maps",
+    "build:devtools": "parcel build src/devtools/index.html --dist-dir dist/devtools --public-url ./ --no-source-maps",
+    "build:devtools:app": "parcel build src/devtools/app/index.html --dist-dir dist/devtools/app --public-url ./ --no-source-maps",
+    "build": "npm run build:bg && npm run build:content && npm run build:options && npm run build:popup && npm run build:devtools && npm run build:devtools:app",
+    "clean": "rimraf dist",
+    "copy:static": "copyfiles manifest.json assets/**/* dist",
+    "dist": "npm run clean && npm run build && npm run copy:static",
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timonwong/undisposition.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timonwong/undisposition/issues"
+  },
+  "homepage": "https://github.com/timonwong/undisposition",
+  "devDependencies": {
+    "@types/chrome": "^0.0.179",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.10.0",
+    "parcel": "^2.3.2",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.2"
+  }
+}
