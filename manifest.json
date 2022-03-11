@@ -1,12 +1,13 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "author": "@timonwong",
   "name": "Undisposition [timonwong fork]",
   "description": "Removes Content-Disposition: attachment HTTP header to allow view files instead of downloading them. Extension icon acts as toggle.",
   "version": "0.0.4",
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "scripts": [
+      "background/index.js"
+    ]
   },
   "icons": {
     "16": "assets/icons/icon16.png",
